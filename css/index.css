@@ -17,13 +17,35 @@ nav {
 .miLogo {
   width: 100%;
 }
-
-nav ul li {
+/* ********************************************
+MENU GRANDE
+**********************************************/
+#listaPequeña {
+  display: block;
+}
+nav #listaPequeña li {
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
-nav ul li a {
+nav #listaPequeña li a {
+  color: black;
+  text-decoration: none;
+  line-height: 5vh;
+}
+/* ********************************************
+MENU GRANDE
+**********************************************/
+#listaGrande {
+  display: none;
+}
+
+nav #listaGrande li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+nav #listaGrande li a {
   text-transform: uppercase;
   color: black;
   text-decoration: none;
@@ -86,7 +108,14 @@ footer {
 }
 
 @media (min-width: 769px) {
-  nav ul li a:hover {
+  #listaPequeña {
+    display: none;
+  }
+
+  #listaGrande {
+    display: block;
+  }
+  nav #listaGrande li a:hover {
     text-decoration: underline;
     font-size: 1.5rem;
   }
